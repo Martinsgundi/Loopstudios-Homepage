@@ -1,0 +1,578 @@
+:root {
+    /* Primary Colors */
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+::before,
+*:after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    color: var(--White);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--Black);
+}
+
+/* Nav */
+.top-wrapper {
+    background: url(asset/images/mobile/image-hero.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+}
+
+.top, .menu-wrapper, .main-content  {
+    width: 88%;
+    margin: 0 auto;
+}
+
+nav {
+    margin-bottom: 15.5rem;
+}
+
+.logo {
+    width: 15rem;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-nav, .d-btn {
+    display: none;
+}
+
+.top-text {
+    border: 2px solid var(--White);
+    padding: 2.5rem 2.5rem 1.5rem;
+    margin-bottom: 19rem;
+    font-size: 1.99rem;
+    width: fit-content;
+    max-width: 50rem;
+}
+
+.top-text h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Aside */
+.m-aside {
+    background-color: #000000;
+    position: fixed;
+    min-height: 100vh;
+    padding: 4rem 0;
+    width: 100%;
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease-out;
+}
+
+.sidebar-open{
+    right: 0;
+}
+
+.menu-pri {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18rem;
+}
+
+.menu-list {
+    display: grid;
+    gap: 2.5rem;
+    font-size: 2.5rem;
+}
+
+/* Main */
+.main-content {
+    margin: 10rem auto;
+}
+
+.company-profile {
+    display: grid;
+    gap: 4rem;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.vr-man {
+    background: url(asset/images/mobile/image-interactive.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 23rem;
+    background-position: center;
+}
+
+.profile-text h2, .heading h2 {
+	font-weight: 300;
+	font-size: 3.3rem;
+}
+
+.profile-text p {
+    color: var(--Dark-Gray);
+    line-height: 1.5;
+    margin-top: 2rem;
+    font-family: 'Alata', sans-serif;
+    max-width: 31ch;
+	margin-inline: auto;
+}
+
+/* Creations */
+.heading h2 {
+    text-align: center;
+}
+
+.creations {
+    margin-top: 5rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.creation {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 12rem;
+}
+
+.creation-name {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    position: relative;
+    top: 44%;
+    left: 6%;
+    line-height: 1;
+    z-index: 1;
+} 
+
+.overlay {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+	width: 100%;
+	height: 100%;
+}
+
+.creation-1 {
+    background-image: url(asset/images/mobile/image-deep-earth.jpg);
+}
+
+.creation-2 {
+    background-image: url(asset/images/mobile/image-night-arcade.jpg);
+}
+
+.creation-3 {
+    background-image: url(asset/images/mobile/image-soccer-team.jpg);
+}
+
+.creation-4 {
+    background-image: url(asset/images/mobile/image-grid.jpg);
+}
+
+.creation-5 {
+    background-image: url(asset/images/mobile/image-from-above.jpg);
+}
+
+.creation-6 {
+    background-image: url(asset/images/mobile/image-pocket-borealis.jpg);
+}
+
+.creation-7 {
+    background-image: url(asset/images/mobile/image-curiosity.jpg);
+}
+
+.creation-8 {
+    background-image: url(asset/images/mobile/image-fisheye.jpg);
+}
+
+.m-btn {
+    text-align: center;
+    margin-top: 3.3rem;
+}
+
+.btn {
+    text-transform: uppercase;
+	letter-spacing: 4px;
+	padding: 0.8rem 4rem;
+	font-family: 'Alata', sans-serif;
+	font-size: 1.5rem;
+    border: 2px solid var(--Very-Dark-Gray);
+}
+
+.btn:hover {
+    background-color: var(--Black);
+    color: var(--White);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-color: var(--Black);
+}
+
+/* Footer */
+footer {
+    background-color: var(--Black);
+    font-family: 'Alata', sans-serif;
+    padding: 5.5rem 2rem;
+    text-align: center;
+}
+
+.f-navlist {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0 4.5rem;
+}
+
+.socials {
+    margin-bottom: 1.5rem;
+}
+
+.icon {
+    margin-left: 1.5rem;
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 500px) {
+    .profile-text p {
+        max-width: 50ch;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        margin-bottom: 13rem;
+    }
+
+    .top-wrapper {
+        padding-top: 6.5rem;
+        background-image: url(asset/images/desktop/image-hero.jpg);
+    }
+
+    .top, .main-content, .f-wrapper {
+        width: 77%;
+    }
+
+    .main-content {
+        margin-top: 14rem;
+        margin-bottom: 17rem;
+    }
+
+    .logo {
+        width: 18rem;
+    }
+
+    .open-menu, .m-btn {
+        display: none;
+    }
+
+    .d-nav {
+        display: flex;
+        font-family: 'Alata', sans-serif;
+    }
+
+    .d-btn {
+        display: block;
+    }
+
+    .d-nav li {
+        margin-left: 2.5rem;
+        transition: all 0.3s ease-out ;
+        position: relative;
+        cursor: pointer;
+    }
+
+    /* Creates the underline with reduced length */
+    .d-nav li::after, 
+    .f-navlist li::after  {
+        content: "";
+        position: absolute;
+        bottom: -1.1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0; 
+        height: 2px; 
+        background-color: var(--White);
+        transition: width 0.3s ease-out;
+        opacity: 0;
+    }
+    
+    /* Shows the underline */
+    .d-nav li:hover::after,
+    .f-navlist li:hover::after {
+        opacity: 1; 
+        width: 50%;
+    }
+  
+    .top-text {
+        max-width: 29ch;
+        font-size: 3rem;
+        padding-right: 1rem;
+        margin-bottom: 11rem;
+    }
+
+    /* main */
+    .vr-man {
+        background: url(asset/images/desktop/image-interactive.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50rem;
+    }
+
+    /* Creations */
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+
+    .creations {
+        margin-top: 4rem;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .creation {
+        height: 45rem;
+        display: grid;
+        transition: all 0.3s ease-out;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .creation:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(225, 225, 225, 0.7);
+        pointer-events: none; /* Allows clicks to pass through the overlay */
+    }
+
+    .creation:hover .overlay {
+        background: initial;
+        color: var(--Black);
+   }
+
+    .creation-name {
+        font-size: 3.3rem;
+        top: 58%;
+        left: 16%;
+    }
+
+    .overlay {
+        position: relative;
+        height: 50%;
+        align-self: end;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    }
+
+    .creation-1 {
+        background-image: url(asset/images/desktop/image-deep-earth.jpg);
+    }
+    
+    .creation-2 {
+        background-image: url(asset/images/desktop/image-night-arcade.jpg);
+    }
+    
+    .creation-3 {
+        background-image: url(asset/images/desktop/image-soccer-team.jpg);
+    }
+    
+    .creation-4 {
+        background-image: url(asset/images/desktop/image-grid.jpg);
+    }
+    
+    .creation-5 {
+        background-image: url(asset/images/desktop/image-from-above.jpg);
+    }
+    
+    .creation-6 {
+        background-image: url(asset/images/desktop/image-pocket-borealis.jpg);
+    }
+    
+    .creation-7 {
+        background-image: url(asset/images/desktop/image-curiosity.jpg);
+    }
+    
+    .creation-8 {
+        background-image: url(asset/images/desktop/image-fisheye.jpg);
+    }
+    
+    /* Footer */
+    footer {
+        padding: 4rem 0;
+        text-align: initial;
+        padding-inline: 0;
+    }
+
+    .f-wrapper {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .socials {
+        margin-bottom: 2rem;
+    }
+
+    .f-navlist li {
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .socials a {
+        padding-bottom: 0.4rem;
+        transition: all 0.1s ease 
+    }
+
+    /* Creates the underline effect*/
+    .socials a:hover {
+        border-bottom: 2px solid var(--White);
+    }
+    
+    .f-navlist {
+        flex-direction: row;
+        margin: 2rem 0 0;
+    }
+
+    .socials, .copyright {
+        text-align: right;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .d-nav li {
+        margin-left: 3.2rem;
+    }
+
+    .logo {
+        width: 19rem;
+    }
+
+    .company-profile {
+        gap: 0;
+        grid-template-columns: minmax(0, 53%) minmax(0, 1fr);
+        margin-bottom: 17rem;
+    }
+
+    .profile-text {
+        border: 1px solid;
+        background-color: #ffffff;
+        text-align: initial;
+        align-self: end;
+    }
+    
+    .profile-text h2 {
+        font-size: 4rem;
+        max-width: 15ch;
+        margin-inline-start: 4rem;
+    }
+
+    .profile-text p {
+        margin-inline-start: 4rem;
+    }
+    
+    .heading {
+        margin-bottom: 8rem;
+    }
+
+    .heading h2 {
+        font-size: 4rem;
+        font-weight: 300;
+    }
+
+    .creations {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .creation-name {
+        font-size: 2.7rem;
+    }
+
+    .f-navlist {
+        gap: 3rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .top-text {
+        font-size: 3.6rem;
+        padding-left: 3.8rem;
+        padding-top: 3rem;
+        line-height: 1.04;
+    }
+}
+
+
+@media (min-width: 1090px) {
+    .company-profile {
+        grid-template-columns: minmax(0, 66%) minmax(0, 1fr);
+    }
+    
+    .profile-text {
+        margin-left: -9rem;
+        padding: 7rem 0 0 0;
+    }
+
+    .profile-text h2, .profile-text p {
+        margin-inline-start: 8rem;
+    }
+    
+}
+
+
+@media (min-width: 1240px) {
+    .profile-text {
+        margin-left: -15.8rem;
+    }
+
+    .profile-text p {
+        max-width: 46ch;
+    }
+
+    .profile-text h2, .heading h2 {
+        font-size: 4.8rem;
+    }
+
+    .profile-text h2 {
+        max-width: 46ch;
+    }
+
+    .creation-name {
+        font-size: 3.3rem;
+    }
+}
