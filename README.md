@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Check out my solution on Front end mentor](https://www.frontendmentor.io/solutions/newshompage-using-grid-and-flexbox-layout-tailwindcss-and-vanilla-js-OuNnb3fQDN)
-- Live Site URL: [Check out the live site](https://martinsgundi-news-homepage.netlify.app/)
+- Solution URL: [Check out my solution on Front end mentor](https://www.frontendmentor.io/solutions/loopstudio-homepage-grid-and-flex-layout-xOCIHt9rCb)
+- Live Site URL: [Check out the live site](https://martinsgundi.github.io/Loopstudios-Homepage/)
 
 ## My process
 
