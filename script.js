@@ -13,3 +13,12 @@ closeMenuIcon.addEventListener("click", () => {
     menuContainer.classList.remove("sidebar-open");
     body.style.overflow = "initial";
 });
+
+// Removes the social icons anchor tag default event.
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});

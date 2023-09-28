@@ -28,6 +28,11 @@ ul {
     list-style: none;
 }
 
+ul li button {
+    color: var(--White);
+    cursor: pointer;
+}
+
 button {
     background: transparent;
     border: none;
@@ -111,6 +116,33 @@ nav {
     font-size: 2.5rem;
 }
 
+.menu-list li, .f-navlist li {
+    position: relative;
+    width: fit-content;
+}
+
+/* Creates the underline with reduced width */
+.d-nav li::after, 
+.f-navlist li::after,
+.menu-list li::after  {
+    content: "";
+    position: absolute;
+    bottom: -1.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 2px; 
+    background-color: var(--White);
+    transition: width 0.3s ease-out;
+}
+
+/* Shows the underline */
+.d-nav li:hover::after,
+.f-navlist li:hover::after,
+.menu-list li:hover::after {
+    width: 50%;
+}
+
 /* Main */
 .main-content {
     margin: 10rem auto;
@@ -162,6 +194,24 @@ nav {
     background-position: center;
     width: 100%;
     height: 12rem;
+    transition: all 0.3s ease-out;
+    position: relative;
+}
+
+.creation:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, 0.7);
+    pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+
+.creation:hover .overlay {
+    background: initial;
+    color: var(--Black);
 }
 
 .creation-name {
@@ -220,6 +270,7 @@ nav {
 .btn {
     text-transform: uppercase;
 	letter-spacing: 4px;
+    color: var(--Black);
 	padding: 0.8rem 4rem;
 	font-family: 'Alata', sans-serif;
 	font-size: 1.5rem;
@@ -247,6 +298,10 @@ footer {
     flex-direction: column;
     gap: 2rem;
     margin: 3rem 0 4.5rem;
+}
+
+.f-navlist li {
+    margin: 0 auto;
 }
 
 .socials {
@@ -304,31 +359,7 @@ footer {
 
     .d-nav li {
         margin-left: 2.5rem;
-        transition: all 0.3s ease-out ;
         position: relative;
-        cursor: pointer;
-    }
-
-    /* Creates the underline with reduced length */
-    .d-nav li::after, 
-    .f-navlist li::after  {
-        content: "";
-        position: absolute;
-        bottom: -1.1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0; 
-        height: 2px; 
-        background-color: var(--White);
-        transition: width 0.3s ease-out;
-        opacity: 0;
-    }
-    
-    /* Shows the underline */
-    .d-nav li:hover::after,
-    .f-navlist li:hover::after {
-        opacity: 1; 
-        width: 50%;
     }
   
     .top-text {
@@ -362,26 +393,8 @@ footer {
     .creation {
         height: 45rem;
         display: grid;
-        transition: all 0.3s ease-out;
-        position: relative;
         cursor: pointer;
     }
-
-    .creation:hover::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(225, 225, 225, 0.7);
-        pointer-events: none; /* Allows clicks to pass through the overlay */
-    }
-
-    .creation:hover .overlay {
-        background: initial;
-        color: var(--Black);
-   }
 
     .creation-name {
         font-size: 3.3rem;
@@ -444,12 +457,6 @@ footer {
 
     .socials {
         margin-bottom: 2rem;
-    }
-
-    .f-navlist li {
-        transition: all 0.3s ease-out;
-        cursor: pointer;
-        position: relative;
     }
 
     .socials a {
