@@ -30,12 +30,14 @@ ul {
 
 ul li button {
     color: var(--White);
-    cursor: pointer;
 }
 
 button {
     background: transparent;
     border: none;
+    font-family: 'Alata', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 h2 {
@@ -113,7 +115,6 @@ nav {
 .menu-list {
     display: grid;
     gap: 2.5rem;
-    font-size: 2.5rem;
 }
 
 .menu-list li, .f-navlist li {
@@ -141,6 +142,11 @@ nav {
 .f-navlist li:hover::after,
 .menu-list li:hover::after {
     width: 50%;
+}
+
+.menu-list li button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
 }
 
 /* Main */
@@ -272,15 +278,12 @@ nav {
 	letter-spacing: 4px;
     color: var(--Black);
 	padding: 0.8rem 4rem;
-	font-family: 'Alata', sans-serif;
-	font-size: 1.5rem;
     border: 2px solid var(--Very-Dark-Gray);
 }
 
 .btn:hover {
     background-color: var(--Black);
     color: var(--White);
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-color: var(--Black);
 }
@@ -332,7 +335,7 @@ footer {
     }
 
     .top, .main-content, .f-wrapper {
-        width: 77%;
+        width: 78%;
     }
 
     .main-content {
@@ -350,7 +353,6 @@ footer {
 
     .d-nav {
         display: flex;
-        font-family: 'Alata', sans-serif;
     }
 
     .d-btn {
